@@ -65,7 +65,7 @@ plt.hist(intplotyears,
         )
 plt.xlabel('Years')
 plt.ylabel('Number of articles')
-plt.savefig('YEARS.pdf')   #change this to .png or .svg
+plt.savefig('YEARS.pdf')
 plt.show()
 
 
