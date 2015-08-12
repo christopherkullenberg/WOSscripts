@@ -25,7 +25,7 @@ wosrecords = f.read()
 text = []
 
 # Counts the articles in the dataset.
-# Number of articles (PT) should match years (PY).
+# Number of articles (PT) should match what you downloaded from WoS.
 def articlecount():
     result = re.findall(r'^PT', wosrecords, flags = re.MULTILINE)
     articles = len(result)
@@ -45,7 +45,7 @@ for t in text:
 
 # Printing a message for the impatient user. 
 print '-' * 10
-print 'Creating wordcloud (this may take some time)...'
+print 'Creating wordcloud from %s articles (this may take some time)...' % articlecount()
 print '-' * 10
 
 # Generating wordcloud
