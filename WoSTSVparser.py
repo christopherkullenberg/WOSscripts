@@ -10,7 +10,7 @@ Note: the semi-colon separated fields can easily be separated as the example wit
 """
 
 with open('wostestar.tsv','r') as tsv: # change file-name here
-    next(tsv) # This skips the first line in the field, which contains the TSV headers
+    next(tsv) # This skips the first line in the file, which contains the TSV headers
     WoSdata = [line.strip().split('\t') for line in tsv] #reads everything as a list
 
 for W in WoSdata:
